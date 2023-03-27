@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TRAVELLO</title>
+</head>
+<body style="background-color:tomato">
+<h2 style="text-align:center">Login</h2><hr>
+<form  method="post"  style="text-align:center" >
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter a valid username" style="border:solid 3px aqua;border-radius:10px"><br><br>
+    <input type="password" name="password" placeholder="Enter a valid password" style="border:solid 3px aqua;border-radius:10px"><br><br><br>
+    <input type="submit" style="border:solid 3px aqua;border-radius:10px">
+
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+
+</body>
+</html>
